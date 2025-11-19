@@ -1,0 +1,21 @@
+#pragma once
+
+#include <cstddef>
+
+namespace Config {
+// Buffer size
+constexpr size_t FILE_BUFFER_SIZE = 8192;       // 8KB
+constexpr size_t ARCHIVE_BLOCK_SIZE = 10240;    // 10KB
+
+// Safety limits
+constexpr int MAX_RECURSION_DEPTH = 100;
+constexpr size_t MAX_EXTRACT_SIZE = 1024 * 1024 * 1024;  // 1GB
+constexpr size_t MAX_ARCHIVE_SIZE = 100 * 1024 * 1024;   // 100MB
+
+// Paths
+constexpr const char* PATH_HOME_BASE = "/home/";
+constexpr const char* PATH_WORKSPACE = "/workspace";
+constexpr const char* PATH_INPUT = "/input.tgz";
+constexpr const char* PATH_OUTPUT = "/output.tgz";
+constexpr const char* PATH_BACKUP_BASE = "/tmp/workspace_backup";
+}  // namespace Config
